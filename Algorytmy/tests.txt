@@ -1,0 +1,8 @@
+AAA aaa,1,1,2
+AAA aaa,1,3,3
+AAA aaa,2,2,3
+AAA aaa,2,3,1
+BBB bbb,0,2,4
+BBB bbb,-1,1,1
+BBB bbb,-2,2,0
+BBB bbb,-1,3,5
