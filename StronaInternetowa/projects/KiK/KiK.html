@@ -1,0 +1,41 @@
+<html>
+<head>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.1/angular.min.js"></script>
+</head>
+
+<body>
+<div id="contain">
+<div id="media" class="media">
+ 
+  <div class="media-body">
+    <h1 class="media-heading"><br/><br/><br/>Kółko i krzyżyk</h1>
+   <p id="p"> 
+   <img   src = "projects/KiK/KiK.png"  id="abotme-me2">
+	Klasyczna gra, w którą zapewne wiele osób grało podczas czasów szkoły podstawowej czy tez późniejszych czasów edukacji. Jest ona stosunkowo prosta zarówno pod względem reguł gry jak i poziomy trudności napisanego programu.
+	Grę uruchamia się tak jak poprzednia dzięki plikowi z rozszerzeniem jar, który można pobrać klikając na poniższy przycisk z napisem ”pobierz”. Gra przeznaczona jest dla dwóch osób, które grają według klasycznych reguł tej gry czyli naprzemiennie najeżdżając i klikając na pole w którym chcą umieścić swój znacznik. Gra toczy się aż któryś z użytkowników umieści swoje trzy znaczniki w jednej linii, bądź tez po skosie i wtedy wygra lub gdy braknie wolnych miejsc na planszy i wtedy gra kończy się remisem. Po każdym ruchy oby dwu graczy, odpowiednie metody w grze kontrolują czy któryś z graczy nie odniósł zwycięstwa bądź tez czy nie brakuje miejsca na planszy, jeśli dojdzie do którejś z wymienionych sytuacji to gracze obserwują na swoim monitorze komunikat z odpowiednią informacją. Aby zagrać ponownie, trzeba jeszcze raz uruchomić grę. Powyżej, zostały opisane najważniejsze informacje o grze i jej zasadach i żeby w nią zagrać, zasadniczo potencjalny gracz nie potrzebuje więcej informacji. 	
+Sam wygląd graficzny gry jest bardzo przejrzysty i nie zawiera żadnych dodatkowych funkcjonalności, co ma na celu umożliwienie użytkownikowi skupienie się na grze, którą rozgrywa się dość szybko a nie na dodatkowych, mniej istotnych elementach. Po uruchomieniu gry, gracze mogą zobaczy takie menu główne:
+Kod odpowiedzialny w grze za grafikę, czyli wyświetlanie się ekranu oraz pojawianie się  znaczników na planszy bazuje a dokładnie dziedziczy po klasie JFrame, która wspiera tego typu operacje i została również uszyta w programie powyżej opisywanym. Jest to bardzo przyjazna i przyjemna w użyciu biblioteka wspierająca programistów w tworzeniu różnego rodzaju grafiki o umiarkowanym stopniu trudności. Za część związana z obsługa gry i jej prawidłowym funkcjonowaniem odpowiada kilka metod, które służą do sprawdzania czy zasady gry są przestrzegane, zaradzania, który z graczy posiada w danej chwili prawo do ruchu lub też, które z pól są już “zajęte” a które dostępne dla gracza wykonującego ruch. 
+	Gra, choć sprawia pozory być najprostszą ze wszystkich do tej pory omawianych to wydaje się być najbardziej ciekawa dla przeciętnego człowieka, ponieważ dostarcza mu rozrywkę w postaci szybkiej partii gry z kimś znajomym. Ta gra może być dobrym przykładem jak w dość prosty i klarowny sposób stworzyć prosta grę, która będzie posiadała interfejs graficzny oraz poprawnie zaprogramowane jej zasady. Pokazuje, że programowanie to nie tylko skomplikowane i rozbudowane projekty, ale czasami tez szybkie i krótkie rozwiązania.
+
+</p>
+
+<p id="kikGP">
+		
+		<button type="button" id="kikG" ng-click="showAlert()" class="btn btn-warning">GitHub</button>
+		<button type="button" id="kikP" class="btn btn-success">Pobierz</button>
+
+				  </p>
+				  <script>
+    var app = angular.module("clickExample", []);
+    app.controller('ExampleController', ['$scope', function ($scope) {
+        $scope.showAlert = function () {
+            alert("This is an example of ng-click");
+        }
+    }]);
+</script>
+      
+  </div>
+</div>
+</div>
+</body>
+</html>

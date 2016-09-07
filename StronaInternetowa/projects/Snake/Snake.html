@@ -1,0 +1,34 @@
+<html>
+<head>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.1/angular.min.js"></script>
+</head>
+
+<body>
+<div id="contain">
+<div id="media" class="media">
+ 
+  <div class="media-body">
+    <h1 class="media-heading"><br/><br/><br/>Snake</h1>
+   <p id="p"> 
+   <img   src = "projects/Snake/Snake.png"  id="abotme-me2">
+Najprawdopodobniej, prawie każda osoba grała w tą grę albo przynajmniej o niej słyszała. Polega ona na sterowaniu “wężem”, który porusza się po ekranie i “łapaniem” dla niego pożywienia, które wyświetla się w formie małych punktów na ekranie. Po każdym zjedzonym kwadraciku, wąż rośnie, przez cos sterowanie nim staje się z kawałka na kawałek coraz trudniejsze. Cały program został w pełni napisany w języku Java, a jednym z głównych celów było napisanie go przy użyciu mechanizmu obiektowości by jak najlepiej zaprezentować jego zasadę działania oraz strukturę 
+	Cały program ma dość proste menu i jest bardzo prosty w obsłudze. Posiada on trzy poziomy trudności i każdy następny poziom różni się od poprzedniego tym, że waż porusza się po ekranie z szybsza prędkością. A żeby przejść na kolejny poziom trzeba zjeść odpowiednia ilość pożywienia, czyli kwadratów. 
+Po uruchomieniu gry od razu możemy sterować wężem i łapać jedzenie. Gracz przegrywa automatycznie, gdy “głowa” węza nałoży się z jakiś jego elementem, czyli mówiąc kolokwialnie, jeśli waż ugryzie sam siebie, lub jeśli waż wyjedzie poza obszar gry. Jeśli, chcemy zagrać jeszcze raz wtedy musimy uruchomić grę jeszcze raz od nowa. Gra ma umiarkowanie trudny poziom trudności, i po kilku minutach gry można w dość w płynnym stopniu opanować sterowanie wężem i przy odrobinie szczęścia w stosunkowo krótkim czasie osiągnąć wszystkie trzy poziomy i co za tym idzie wygrać całą grę. Grę, można pod wieloma względami jeszcze rozbudować i dodać wiele nowych funkcjonalności. Jednak, trzeba zauważyć, że tego typu gier jest bardzo duża ilość w Internecie i znalezienie takie gry o większej funkcjonalności dla osoby zainteresowanej nie będzie stanowiło żadnego problemu. Sama gra podobnie jak poprzednie projekty ma na celu pokazanie pewnych umiejętności programistycznych jego autora, niż skupianie się na zawansowanej grze. 
+Pora, skupić się na samym kodzie, który nacechowany jest funkcjonalnościami obiektowości i jej głównymi paradygmatami. Gra składa się z dwóch głównych klas,  gdzie w jednej z nich została umieszczona część odpowiedzialna za implementacje nowych metod oraz rozszerzenie już istniejących w zasobach Javy. Są one odpowiedzialne miedzy innymi, za odpowiedną reakcję poruszającego się węza na naciśnięcie klawiszów sterowania, zmiany w wyświetlanym obrazie, związane z przemieszczaniem i rośnięciem węża czy tez kontrolowanie czy gra nie powinna zostać przerwana. Do zaimplementowania takich funkcjonalności zostały rozszerzone dwa interfejsy: ActionListener i KeyListener. Ich ogólnym działaniem jest wspomaganie kontrolowania ruchu tzn. czy został wykonany jakiś ruch przez użytkownika i jeśli tak to, jaki. W języku potocznym przejęło się mówić ze są to “nadsłuchiwacze” ruchu. Pierwszy interfejs dedykowany jest do wszystkich zdarzeń, które są wykonywane przez użytkownika np. naciśnięcie klawisza, ruch myszka itp, natomiast drugi jest stricte skierowany na kontrolowanie klawiatury i sprawdzanie, jaki klawisz został naciśniety. Druga klasa, wykorzystując metody stworzone w omawianej powyżej klasie zarządza mechaniką działania gry i powoduje, że gra w ogóle startuje i prawidłowo funkcjonuje. Tworzy ona nowe obiekty i w odpowiedni sposób używa ich, co powoduje dobrą optymalizację kodu. W tej klasie przy pomocy mechanizmu dziedziczenia wykorzystywane są zasoby umieszczone w klasie JPanel. Która zazwyczaj odpowiedzialna jest za obszar graficzny programów. Zarówno pierwsza jak i druga klasa, są w pełni potrzebne do poprawnego działania programu. Przeglądając się bliżej kodu zawartemu w obydwu klasach można zaobserwować dość klasyczny przykład wykorzystania obiektowości oraz kilku z jej głównych cech charakterystycznych, czyli dziedziczenia, implementacji oraz hermetyzacji danych.
+
+</p>
+
+<p id="kikGP">
+		
+		<button type="button" id="kikG" class="btn btn-warning">GitHub</button>
+		<button type="button" id="kikP" class="btn btn-success">Pobierz</button>
+
+				  </p>
+
+
+      
+  </div>
+</div>
+</div>
+</body>
+</html>

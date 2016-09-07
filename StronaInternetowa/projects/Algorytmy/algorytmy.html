@@ -1,0 +1,48 @@
+<html>
+<head>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.1/angular.min.js"></script>
+</head>
+
+<body>
+<div id="contain">
+<div id="media" class="media">
+ 
+  <div class="media-body">
+    <h1 class="media-heading"><br/><br/><br/>Algorytmy</h1>
+   <p id="p"> 
+   <img   src = "projects/Algorytmy/algorytmy.png"  id="abotme-me2">
+Innym, z programów zawartym w  omawianym portfolio jest program odpowiedzialny za obliczenia statystyczne dla dwóch klas próbek o jednej lub wielu zmiennych za pomocą odpowiednich do tego algorytmów. 
+	Algorytmy, które są tutaj zaprezentowane, są bardzo rzadko używane i nie wiele osób nawet tych związanych zawodowo z matematyką miało z nimi kiedykolwiek, jakikolwiek kontakt. W dużym uogólnieniu, omawiane algorytmy maja za zadnie  wybranie cechy spośród wielu cech zawartych w danej klasie(klasa może zawierać wiele cech), która będzie posiadał najlepszy współczynnik Fishera. Współczynnik Fishera określa “zdolność” cechy do jej dalszej klasyfikacji według odpowiednich klasyfikatorów. Czym mniejszy spółczynnik  Fishera, tym cecha ma lepsza zdolność od poddania się klasyfikacji. W zależności  od ilości próbek w cechach, stosuje się odpowiedni wzór do wyliczenia współczynnika Fishera. Różny jest do jednej  oraz więcej niż jednej próbki. Tak sklasyfikowaną, próbkę lub x-najlepszych próbek można poddać odpowiednim klasyfikatorom, których zadaniem jest sklasyfikowane losowej próbki do odpowiednej z klas. Jeśli klasyfikatorowi poddamy  x-cech o najlepszym współczynniku Fishera to wynik będzie znacznie lepszy od tego który by był dla losowych próbek. Występują 4 podstawowe klasyfikatory:
+	<ol id="p">
+NN</br>
+NM</br>
+k-NN</br>
+k-NM</br>
+Crosswalidacja
+</ol>
+</p >
+<p id="p">
+Zasada działania programu jest bardzo prosta, na początku użytkownik musi wybrać odpowiedni plik  .txt z danymi wejściowymi, na których będzie operował omawiany program. Następnie, za pomocą odpowiedniego przycisku “wczytaj dane” program wczytuje dane do odpowiednich zmiennych. Kolejnym krokiem powinno być wybranie ilości najlepszych cech, jakie ma sklasyfikować program za pomocą wyliczania współczynniki Fishera. 
+	Są dwie metody wyliczania współczynnika Fishera dla wielu zmiennych. Pierwsza generuje wszystkie możliwe kombinacie cech jakie muszą byś poddane wyliczaniu współczynnika i dokonuje obliczenie dla każdej z nich a druga polega na tym, iż program oblicza współczynnik początkowo tylko do 1 cechy następnie szuka najlepszego współczynnika dla 2 cech, znając jednak wynik z kroku wcześniej i po obliczeniu przechodzi do obliczania 3 cech znając 2 najlepsze wcześniej i tak w kółko dopóki nie zostanie znaleziona wymagana liczba najlepszych cech. Pierwsza metoda jest zawodna, gdyż jest bardzo pamięcio chłonna i przy  nawet małej ilości danych wejściowych program dysponujący średnimi zasobami sprzętowymi może mieć problem z wyliczeniem nawet 5 najlepszych cech z powodu braku dostępnej pamięci podręcznej. Inaczej jest z drugim algorytmem, który nie posiada takich problemów i jest ona zalecany przy wyborze sposobu obliczeń. Wyniki można zobaczyć w okienku, “Wyniki”.
+	Po wyselekcjonowaniu odpowiednich cech można przejść do głównej części programu, czyli klasyfikatorów. Z listy dostępnych klasyfikatorów, wybieramy nas interesujący i po kliknięciu “Oblicz” można obserwować wyniki. Czym lepszy procent skuteczności klasyfikatora, tym lepszy klasyfikator a co za tym idzie jego algorytm. 
+	Pierwszym z klasyfikatorów jest klasyfikator NN, którego zasada działania opiera się na tym, iż dla każdej cechy testowej(wylosowanej) wylicza on odległość od każdej cechy z klasy A i klasy B oraz ewentualnie każdej następnej klasy i wybiera najmniejsza odległość dla każdej z klas. Klasa posiadająca najmniejsza odległość jest klasą do której będzie sklasyfikowana próbka według klasyfikatora. Następnie sprawdza się otrzymany wynik klasyfikacji z tym rzeczywistym I jeśli się zgadzają to klasyfikacji jest poprawna i tak postępuje się do każdej próbki należącej do grupy testowej. Bardzo podobnie działa klasyfikator k-NN,  tym że program klasyfikuję daną cechę według k najlepszych(najmniejszych) odległości. Czyli, przykładowo dla k=5 wybierze 5 najlepszych cech z obydwu klas i ta klasa będzie miała więcej swoich przedstawicieli w danej grupie, ta będzie zwycięska. A pozostała zasada działania algorytmu jest taka sama. Dzięki zastosowaniu k najlepszy trafień, skuteczność algorytmu powinna się zwiększyć, niestety wraz z wzrostem pamięci wrasta tez ilość pamięci potrzebnej do obliczeń, jednak jest to dość niewielki wzrost.
+	Kolejnym algorytmem, jest algorytm NM-, czyli algorytm najbliższej średniej. Algorytm, działa podobnie jak dwa powyżej, z tym, ze w tym przypadku algorytm liczy średnią odległość cech od danej próbki dla danej klasy i następnie porównuje otrzymane średnie dla poszczególnych klas i wybiera najlepszą, czyli najmniejsza, i dalej tak samo jak we wcześniejszych klasyfikatorach, wylicza skuteczność działania algorytmu. Ostatnim z omawianych algorytmów, jest algorytm k-NM, i jego zasada działania jest bardziej skomplikowana niż trzech pierwszych. Na początku losowo wybierane są k cechy, do których klasyfikowane są za pomocą algorytmu NN pozostałe cechy. Ze wszystkich cech zaklasyfikowanych do poszczególnych klas, wylicza się średnia i to będą nowe punkty środkowe do poszczególnych klas. Kolejnym krokiem jest sprawdzenie o ile różni się nowy punkt środkowy dla poszczególnych klas od starego, jeśli mieści się w marginesie tolerancji, który ustalamy sami to algorytm przechodzi do dalszych obliczeń, jeśli nie do ponownie klasyfikowane są cechy i liczony punkt środkowy aż do momentu, gdy stary i nowy punkt testowy będą takie same lub będą na tyle podobne, że ich różnica będzie mieściła się w punkcie tolerancji. Jak już tak się stanie to kolejnym krokiem jest policzenie kolejno dla wszystkich cech ze zbioru testowego odległości od punktów środkowych poszczególnych klas i klasyfikacja ich do odpowiednej klasy a następnie obliczanie skuteczności analogicznie jak w pozostałych klasyfikatorach.
+	Zasada, wyliczania współczynnika Fishera oraz klasyfikatorów, zostało powyżej wyjaśniona bardzo ogólnikowo i w celu dokładniejszego jej zróżowienia zalecane jest zapoznanie z bardziej szczegółowym opisem zamieszczonym w dedykowanej do tego pozycji z bibliografii. Nie mniej jednak, program został sprawdzony przez osoby pracującymi codziennie z omawianymi algorytmami i weryfikacja przebiegła poczytywanie. Poza tym, warto przypomnieć, że jednym z głównych celów tego programu w wersji umieszczonej na stronie miało być ukazanie umiejętności zaimplementowania trudnych matematycznych algorytmów, a nie szczegółowe ich analizowanie i omawianie, co było konieczne przy ich implementacji.
+
+
+</p>
+
+<p id="kikGP">
+		
+		<button type="button" id="kikG" class="btn btn-warning">GitHub</button>
+		<button type="button" id="kikP" class="btn btn-success">Pobierz</button>
+
+				  </p>
+
+
+      
+  </div>
+</div>
+</div>
+</body>
+</html>
