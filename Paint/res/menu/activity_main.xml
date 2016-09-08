@@ -1,0 +1,68 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/item1"
+        android:showAsAction="always"
+        android:icon="@drawable/kolor"
+        android:title="">       
+    </item>
+    <item
+        android:id="@+id/item2"
+        android:showAsAction="always"
+        android:icon="@drawable/kropki"
+        android:title="">
+    </item>
+    <item
+        android:id="@+id/item3"
+        android:showAsAction="always"
+        android:icon="@drawable/narzedzia"
+        android:title="">
+              
+        <menu>
+            <item
+                android:id="@+id/item4"
+                android:title="Pędzel">
+            </item>
+            <item
+                android:id="@+id/item5"
+                android:title="Linia">
+            </item>
+            <item
+                android:id="@+id/item6"
+                android:title="Kształty">
+            </item>
+            <item
+                android:id="@+id/item8"
+                android:title="Gumka">
+            </item>
+            <item
+        android:id="@+id/item7"
+        android:showAsAction="ifRoom"
+        android:title="Czyść cały obraz">
+    	</item>
+    	   <item
+        android:id="@+id/item13"
+        android:showAsAction="ifRoom"
+        android:title="Zaznaczenie">
+        <menu>
+            <item
+                android:id="@+id/item14"
+                android:title="Zaznacz"/>
+            <item
+                android:id="@+id/item15"
+                android:title="Skopiuj"/>
+            <item
+                android:id="@+id/item16"
+                android:title="Wklej"/>
+        </menu>
+    </item>
+        </menu>
+    </item>   
+    <item
+        android:id="@+id/item12"
+        android:showAsAction="always"
+        android:icon="@drawable/dyskietka"
+        android:title="">             
+    </item>
+ 
+</menu>

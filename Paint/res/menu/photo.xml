@@ -1,0 +1,29 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+     <item
+      android:id="@+id/sa" 
+      android:showAsAction="always"
+      android:icon="@drawable/narzedzia"
+      android:title="">
+      
+      <menu>
+    <item
+        android:id="@+id/brightness"
+        android:title="Jasnosc"/>
+    
+    <item android:id="@+id/sepia" android:title="Sepia"></item>
+  
+    <item android:id="@+id/rotate" android:title="Obrot"></item>
+    <item android:id="@+id/invert" android:title="Odwroc Kolory"></item>
+    <item android:id="@+id/grey" android:title="Skala szarosci"></item>
+    </menu>
+    </item>
+     
+     <item
+      android:id="@+id/saveToFile" 
+      android:showAsAction="always"
+      android:icon="@drawable/dyskietka"
+      android:title="">
+      
+  </item>
+</menu>
