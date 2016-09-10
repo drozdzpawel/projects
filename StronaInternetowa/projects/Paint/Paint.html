@@ -1,36 +1,33 @@
 <html>
 <head>
     <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.1/angular.min.js"></script>
+	<script>
+		var test = angular.module('test', []);
+		test.controller('testController', ['$compile', '$scope','$window', function($compile, $scope, $window) {
+		   $scope.openWindow = function() {
+			   $window.open('https://github.com/drozdzpawel/projects/tree/master/Paint')
+		   };}]);   
+	</script>
 </head>
-
 <body>
-<div id="contain">
-<div id="media" class="media">
- 
-  <div class="media-body">
-    <h1 class="media-heading"><br/><br/><br/>Paint</h1>
-   <p id="p"> 
-   <img   src = "projects/Paint/Paint.png"  id="abotme-me2">
-Rozpowszechniający się rozwój techniki, coraz większe zapotrzebowanie na nowinki technologiczne oraz popularyzacja smarfonów spowodowały, że została stworzona aplikacja do rysowania i przetwarzania grafiki w systemie Android.  
-Aplikacja ta ma za zadanie, umożliwiać użytkownikowi rysowanie prostych kształtów, wstawianie figur geometrycznych lub edytowanie ich. Poza tym, powinna dawać możliwość użytkownikowi prostej edycji grafiki już wykonanej, np. zdjęcia z aparatu. Użytkownik powinien w jasny i klarowny sposób móc korzystać ze wszystkich jej funkcji.  Jej jedną z głównych cech jest przejrzystość, żeby użytkownik czuł jak najwięcej radości z jej korzystania. Celem, jaki przyświecał przy założeń wstępnych tego programu  było połączenie rysowania z przetwarzaniem.  Co prawda na rynku Istnieje, już kilka tego typu prostych aplikacji do rysowania lub edytowania na ten system operacyjny, lecz żadna z nich nie łączy tych dwóch rodzajów obsługi grafiki w jednej aplikacji i to właśnie sprawia, że ta aplikacja jest na swój sposób wyjątkowa i niepowtarzalna. Daje użytkownikowi takie możliwości, jakich nie daje żadna inna aplikacja rozpowszechniana na ogólnodostępnym rynku.
-Program został napisany na platformie Android, gdyż jest ona w obecnej chwili najbardziej popularna wśród smartfonów [18]. Szacuje się, że w 2014 roku Android stanowił 85 % rynku smartfonów na świecie i w kolejnych latach ma zwiększać jeszcze swój udział. Dodatkowym atutem je to, że  dzięki platformie Google Play możemy w łatwy sposób udostępnić i rozpowszechnić napisaną aplikację, tak żeby inni użytkownicy mogli ją przetestować, ocenić oraz po prostu skorzystać z niej. W dodatku, jeśli okazałoby się, że nasza aplikacja spodobała się użytkownikom na całym świecie i masowo pobieraliby ją na swoje urządzenia, to istnieje możliwość otrzymać wynagrodzenie od firmy Google za napisany program. Warto wspomnieć, że wszystkie narzędzia potrzebne do napisania aplikacji mamy udostępnione za darmo przez producenta i w łatwy sposób są dostępne dla każdego chcącego stworzyć jakąkolwiek aplikację na urządzenie z tego typu oprogramowaniem. Bardzo przydatna przy pisaniu kodu programu do aplikacji na ten system może okazać się pomoc, jaką oferuje Android, czyli strona www.developer.android.com, gdzie w języku angielskim znajdziemy opis wszystkich klas, metod, komend itp. potrzebnych do tworzenia oraz udoskonalania programu.
-Sama zasada działania aplikacji oraz używanie jej jest bardzo proste: umożliwia użytkownikowi płynne posługiwanie się jej funkcjami. Posiada ona kilka menu wyboru, dzięki którym przechodzimy do konkretnego zastosowania aplikacji. Wszystkie funkcję udostępnione użytkownikowi znajdują się w górnym menu ekranu, dzięki czemu nie musimy ich szukać na bocznych paskach wysuwanych, czy też w dolnym menu, jak to jest w innych tego typu urządzeniach.
-Mamy tutaj do dyspozycji opcję „Edycja grafiki”, która daje nam możliwości przejścia do edytora przetwarzającego grafikę oraz wybór opcji „Paint”, która umożliwia tworzenie własnej prostej grafiki. Na tym etapie powinniśmy być zdecydowani, co chcemy zrobić za pomocą tej aplikacji. Trzeba również zwrócić uwagę, że gdy wybierzemy błędnie, zawsze za pomocą przycisku powrotu możemy wrócić do głównego menu.
-
-
-</p>
-
-<p id="kikGP">
-		
-		<button type="button" id="kikG" class="btn btn-warning">GitHub</button>
-		<button type="button" id="kikP" class="btn btn-success">Pobierz</button>
-
-				  </p>
-
-</script>
-      
-  </div>
-</div>
-</div>
+	<div id="contain">
+		<div id="media" class="media">
+	 	    <div class="media-body">
+				<h1 class="media-heading"><br/><br/><br/>Paint</h1>
+				<p id="p"> 
+					<img   src = "projects/Paint/Paint.png"  id="abotme-me2">
+					Rozpowszechniający się rozwój techniki, coraz większe zapotrzebowanie na nowinki technologiczne oraz popularyzacja smarfonów spowodowały, że została stworzona aplikacja do rysowania i przetwarzania grafiki w systemie Android.  
+					Aplikacja ta ma za zadanie, umożliwiać użytkownikowi rysowanie prostych kształtów, wstawianie figur geometrycznych lub edytowanie ich. Poza tym, powinna dawać możliwość użytkownikowi prostej edycji grafiki już wykonanej, np. zdjęcia z aparatu. Użytkownik powinien w jasny i klarowny sposób móc korzystać ze wszystkich jej funkcji.  Jej jedną z głównych cech jest przejrzystość, żeby użytkownik czuł jak najwięcej radości z jej korzystania. Celem, jaki przyświecał przy założeń wstępnych tego programu  było połączenie rysowania z przetwarzaniem.  Co prawda na rynku Istnieje, już kilka tego typu prostych aplikacji do rysowania lub edytowania na ten system operacyjny, lecz żadna z nich nie łączy tych dwóch rodzajów obsługi grafiki w jednej aplikacji i to właśnie sprawia, że ta aplikacja jest na swój sposób wyjątkowa i niepowtarzalna. Daje użytkownikowi takie możliwości, jakich nie daje żadna inna aplikacja rozpowszechniana na ogólnodostępnym rynku.
+					Program został napisany na platformie Android, gdyż jest ona w obecnej chwili najbardziej popularna wśród smartfonów [18]. Szacuje się, że w 2014 roku Android stanowił 85 % rynku smartfonów na świecie i w kolejnych latach ma zwiększać jeszcze swój udział. Dodatkowym atutem je to, że  dzięki platformie Google Play możemy w łatwy sposób udostępnić i rozpowszechnić napisaną aplikację, tak żeby inni użytkownicy mogli ją przetestować, ocenić oraz po prostu skorzystać z niej. W dodatku, jeśli okazałoby się, że nasza aplikacja spodobała się użytkownikom na całym świecie i masowo pobieraliby ją na swoje urządzenia, to istnieje możliwość otrzymać wynagrodzenie od firmy Google za napisany program. Warto wspomnieć, że wszystkie narzędzia potrzebne do napisania aplikacji mamy udostępnione za darmo przez producenta i w łatwy sposób są dostępne dla każdego chcącego stworzyć jakąkolwiek aplikację na urządzenie z tego typu oprogramowaniem. Bardzo przydatna przy pisaniu kodu programu do aplikacji na ten system może okazać się pomoc, jaką oferuje Android, czyli strona www.developer.android.com, gdzie w języku angielskim znajdziemy opis wszystkich klas, metod, komend itp. potrzebnych do tworzenia oraz udoskonalania programu.
+					Sama zasada działania aplikacji oraz używanie jej jest bardzo proste: umożliwia użytkownikowi płynne posługiwanie się jej funkcjami. Posiada ona kilka menu wyboru, dzięki którym przechodzimy do konkretnego zastosowania aplikacji. Wszystkie funkcję udostępnione użytkownikowi znajdują się w górnym menu ekranu, dzięki czemu nie musimy ich szukać na bocznych paskach wysuwanych, czy też w dolnym menu, jak to jest w innych tego typu urządzeniach.
+					Mamy tutaj do dyspozycji opcję „Edycja grafiki”, która daje nam możliwości przejścia do edytora przetwarzającego grafikę oraz wybór opcji „Paint”, która umożliwia tworzenie własnej prostej grafiki. Na tym etapie powinniśmy być zdecydowani, co chcemy zrobić za pomocą tej aplikacji. Trzeba również zwrócić uwagę, że gdy wybierzemy błędnie, zawsze za pomocą przycisku powrotu możemy wrócić do głównego menu.
+				</p>
+				<div id="kikGP" ng-app="test" ng-controller="testController">
+					<button type="button" id="kikG" class="btn btn-warning" ng-click="openWindow()">GitHub</button>
+					<button type="button" id="kikP" class="btn btn-success" onclick="location.href = 'https://github.com/drozdzpawel/projects/archive/master.zip'">Pobierz</button>
+				</div>		  
+			</div>
+		</div>
+	</div>
 </body>
 </html>

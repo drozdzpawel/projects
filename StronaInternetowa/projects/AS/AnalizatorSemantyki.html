@@ -1,38 +1,36 @@
 <html>
 <head>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.1/angular.min.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.1/angular.min.js"></script>
+	<script>
+		var test = angular.module('test', []);
+		test.controller('testController', ['$compile', '$scope','$window', function($compile, $scope, $window) {
+		   $scope.openWindow = function() {
+			   $window.open('https://github.com/drozdzpawel/projects/tree/master/AnalizatorSemantyki')
+		   };}]);	   
+	</script>
 </head>
-
 <body>
-<div id="contain">
-<div id="media" class="media">
- 
-  <div class="media-body">
-    <h1 class="media-heading"><br/><br/><br/>Analizator semantyki</h1>
-   <p id="p"> 
-   <img   src = "projects/AS/AS.png"  id="abotme-me2">
-Program ma za zadnie badać semantykę strony internetowej. Dla części osób samos słowo semantyka może być dość kłopotliwe do zrozumienia, wiec semantyka jest to dział nauki zajmujący się znaczeniem słów. I właśnie podobne zastosowanie ma omawiany projekt.
-	Zanim, przejdziemy do większej ilości szczegółów związanych z omawianym projektem warto wspomnieć jak duże znaczenie oraz “moc” ma treść znajdująca się w nieograniczonych zasobach Internetu. Internet stał się ogromnym obszarem dziki, któremu firmy mogą dotrzeć do swoich potencjalnych klientów, dowiedzieć się również, co sadzą Ci klienci o danej firmie oraz wyszukać informacje które pomogą znacznie w rozwoju firmy. Duże znacznie w opisanych powyżej czynnościach ma automatyczne ocenianie czy dana treść jest pozytywnie czy tez negatywnie mówiąc o konkretnej jednostce. Takie ocenianie treści, jest właśnie wspomnianą analizą semantyczna wypowiedzi i wracając do omawianego projektu, jego zadaniem jest właśnie dokonywanie takiej analizy semantycznej danych treści rozszerzone o kilka dodatkowych opcji.
-	Projekt daje możliwość, zbadania czy wskazana przez nas strona ma charakter pozytywny czy tez negatywny, i w dodatku możemy dowiedzieć się paru dodatkowych informacji. Cały interfejs jest bardzo intuicyjny i zostało stworzony przy pomocy jednej z najnowszych udoskonaleń w Javy w ostatnim czasie, czyli dzięki Javie FX. 
-W samym okienku na górze podajemy adres strony, która chcemy, aby nasz “bot” ocenił, następnie mamy do dyspozycji dodatkowe narzędzi do lepszego poznania strony, mianowicie program wyszukuje nam określoną przez nas ilość słów o określonej przez nas długości, które są nacechowane najbardziej pozytywnie oraz negatywnie. Po podaniu odpowiedniej ilości parametrów i kliknięciu pokaż wyniki, możemy zaobserwować listę stron, natomiast po kliknięciu „oceń stronę”, zaobserwujemy w okienku na dole wynik dla całej treści strony. Dzięki, tym dodatkowym opcją możemy dokładniej przeanalizować stronę i zaobserwować czy na przykład nie zawiera ona bluźnierstw lub innych charakterystycznych słów.
-	Ocenianie semantyki słowa, jest dość skomplikowanym zadaniem i stworzenie od zera programu, który by tego dokonywał, było by zbyt pracochłonne dlatego tez w tym programie autor skorzystał z zewnętrznego api które po przekazaniu mu treści zawraca wynik  oraz “moc” nacechowania, czyli jak bardzo dane słowo jest pozytywne, negatywne bądź neutralne - bo takie trzy typy oceny mogliśmy otrzymać od zastosowanego api. Api, z którego skorzystał autor jest w pełni darmowe i jego producent dołącza dość jasno napisana instrukcję jak z niego korzystać. Podobnych API jest, co najmniej kilka, jednak wszystkie maja jedną wadę, mianowicie współpracują tylko z anglojęzycznymi treściami, nie wspomagając jak na razie języka polskiego, wiec omawiany program będzie działał tylko dla stron w języku angielskim.
-	Główna części oceny sentymentu wykonywana jest dzięki zewnętrznemu api o nazwie mashape, o którym więcej można przeczytaj pod tym linkiem: https://www.mashape.com/.  Samo wyszukiwanie skończonej ilości słów, zajmuje programowi dość dużo czasu, przez który pozostałe funkcje są zablokowane i warto tu wspomnieć, że idealnym rozwianiem dla tego problemu byłoby zastosowanie wielowątkowości, dzięki czemu program by sie nie zawieszał, jednak poza wyszukiwaniem słów i badaniem sentymentu całości, aplikacja nie posiada innych funkcjonalności i zastosowanie tego rozwiązania przy takiej funkcjonaliści nie było niezbędne.
-	Samo przeszukiwanie stron, może na początku wydać się trochę nie do końca praktyczną czynnością zwłaszcza dla osób, które nie przeszukiwały Internetu w celu znalezienia jakieś oceny, czy też recenzji. Jednak, gdy trochę jeszcze zmodyfikujmy nasza aplikację i wyobrazimy sobie, że analizuje ona w opisany sposób nie całe strony, ale komentarze użytkowników jakiegoś portalu społecznościowego, i dzięki niej użytkownik będzie mógł się dowiedzieć, który użytkownik pisze pozytywnie a który negatywnie na jego temat to wyda się ona za pewne dużo bardziej atrakcyjna. Rozpatrując przypadek, bardziej komercyjny, pracodawca może dzięki niej dowiedzieć się, co jego potencjalny pracownik pisał na temat jego firmy. Możliwości, jakie może dawać tego typu programik są ogromne, i według wielu artkułów w przyszłości tego typu programy będą rozwiane i porządne.
-	Omawiany, tutaj program był tylko jednym z kilku realizowanych na zajęciach, dotyczących inteligentnego przeszukiwania Internetu. Na stronie projektu na GitHubie zostały zamieszczone inne, podobne projekty, które mają nie mniej ciekawe zastosowanie. Można tam, znaleźć miedzy innymi program, który ocenia za pomocą specjalnych obliczeń wektorowych stopień podobieństwa kilku stron do siebie, aplikacje która stanowi wyszukiwarkę po treści i tytule dla książek spakowanych w plikach zip czy tez program który zagnieżdżając się w wszystkich hiper linkach kolejnych podstron danej strony przeprowadza dla nich statystyki. 
-
-</p>
-
-<p id="kikGP">
-		
-		<button type="button" id="kikG" class="btn btn-warning">GitHub</button>
-		<button type="button" id="kikP" class="btn btn-success">Pobierz</button>
-
-				  </p>
-
-
-      
-  </div>
-</div>
-</div>
+	<div id="contain">
+		<div id="media" class="media">
+	   	    <div class="media-body">
+				<h1 class="media-heading"><br/><br/><br/>Analizator semantyki</h1>
+				<p id="p"> 
+					<img   src = "projects/AS/AS.png"  id="abotme-me2">
+					Program ma za zadnie badać semantykę strony internetowej. Dla części osób samos słowo semantyka może być dość kłopotliwe do zrozumienia, wiec semantyka jest to dział nauki zajmujący się znaczeniem słów. I właśnie podobne zastosowanie ma omawiany projekt.
+						Zanim, przejdziemy do większej ilości szczegółów związanych z omawianym projektem warto wspomnieć jak duże znaczenie oraz “moc” ma treść znajdująca się w nieograniczonych zasobach Internetu. Internet stał się ogromnym obszarem dziki, któremu firmy mogą dotrzeć do swoich potencjalnych klientów, dowiedzieć się również, co sadzą Ci klienci o danej firmie oraz wyszukać informacje które pomogą znacznie w rozwoju firmy. Duże znacznie w opisanych powyżej czynnościach ma automatyczne ocenianie czy dana treść jest pozytywnie czy tez negatywnie mówiąc o konkretnej jednostce. Takie ocenianie treści, jest właśnie wspomnianą analizą semantyczna wypowiedzi i wracając do omawianego projektu, jego zadaniem jest właśnie dokonywanie takiej analizy semantycznej danych treści rozszerzone o kilka dodatkowych opcji.
+						Projekt daje możliwość, zbadania czy wskazana przez nas strona ma charakter pozytywny czy tez negatywny, i w dodatku możemy dowiedzieć się paru dodatkowych informacji. Cały interfejs jest bardzo intuicyjny i zostało stworzony przy pomocy jednej z najnowszych udoskonaleń w Javy w ostatnim czasie, czyli dzięki Javie FX. 
+					W samym okienku na górze podajemy adres strony, która chcemy, aby nasz “bot” ocenił, następnie mamy do dyspozycji dodatkowe narzędzi do lepszego poznania strony, mianowicie program wyszukuje nam określoną przez nas ilość słów o określonej przez nas długości, które są nacechowane najbardziej pozytywnie oraz negatywnie. Po podaniu odpowiedniej ilości parametrów i kliknięciu pokaż wyniki, możemy zaobserwować listę stron, natomiast po kliknięciu „oceń stronę”, zaobserwujemy w okienku na dole wynik dla całej treści strony. Dzięki, tym dodatkowym opcją możemy dokładniej przeanalizować stronę i zaobserwować czy na przykład nie zawiera ona bluźnierstw lub innych charakterystycznych słów.
+						Ocenianie semantyki słowa, jest dość skomplikowanym zadaniem i stworzenie od zera programu, który by tego dokonywał, było by zbyt pracochłonne dlatego tez w tym programie autor skorzystał z zewnętrznego api które po przekazaniu mu treści zawraca wynik  oraz “moc” nacechowania, czyli jak bardzo dane słowo jest pozytywne, negatywne bądź neutralne - bo takie trzy typy oceny mogliśmy otrzymać od zastosowanego api. Api, z którego skorzystał autor jest w pełni darmowe i jego producent dołącza dość jasno napisana instrukcję jak z niego korzystać. Podobnych API jest, co najmniej kilka, jednak wszystkie maja jedną wadę, mianowicie współpracują tylko z anglojęzycznymi treściami, nie wspomagając jak na razie języka polskiego, wiec omawiany program będzie działał tylko dla stron w języku angielskim.
+						Główna części oceny sentymentu wykonywana jest dzięki zewnętrznemu api o nazwie mashape, o którym więcej można przeczytaj pod tym linkiem: https://www.mashape.com/.  Samo wyszukiwanie skończonej ilości słów, zajmuje programowi dość dużo czasu, przez który pozostałe funkcje są zablokowane i warto tu wspomnieć, że idealnym rozwianiem dla tego problemu byłoby zastosowanie wielowątkowości, dzięki czemu program by sie nie zawieszał, jednak poza wyszukiwaniem słów i badaniem sentymentu całości, aplikacja nie posiada innych funkcjonalności i zastosowanie tego rozwiązania przy takiej funkcjonaliści nie było niezbędne.
+						Samo przeszukiwanie stron, może na początku wydać się trochę nie do końca praktyczną czynnością zwłaszcza dla osób, które nie przeszukiwały Internetu w celu znalezienia jakieś oceny, czy też recenzji. Jednak, gdy trochę jeszcze zmodyfikujmy nasza aplikację i wyobrazimy sobie, że analizuje ona w opisany sposób nie całe strony, ale komentarze użytkowników jakiegoś portalu społecznościowego, i dzięki niej użytkownik będzie mógł się dowiedzieć, który użytkownik pisze pozytywnie a który negatywnie na jego temat to wyda się ona za pewne dużo bardziej atrakcyjna. Rozpatrując przypadek, bardziej komercyjny, pracodawca może dzięki niej dowiedzieć się, co jego potencjalny pracownik pisał na temat jego firmy. Możliwości, jakie może dawać tego typu programik są ogromne, i według wielu artkułów w przyszłości tego typu programy będą rozwiane i porządne.
+						Omawiany, tutaj program był tylko jednym z kilku realizowanych na zajęciach, dotyczących inteligentnego przeszukiwania Internetu. Na stronie projektu na GitHubie zostały zamieszczone inne, podobne projekty, które mają nie mniej ciekawe zastosowanie. Można tam, znaleźć miedzy innymi program, który ocenia za pomocą specjalnych obliczeń wektorowych stopień podobieństwa kilku stron do siebie, aplikacje która stanowi wyszukiwarkę po treści i tytule dla książek spakowanych w plikach zip czy tez program który zagnieżdżając się w wszystkich hiper linkach kolejnych podstron danej strony przeprowadza dla nich statystyki. 
+				</p>
+				<div id="kikGP" ng-app="test" ng-controller="testController">
+					<button type="button" id="kikG" class="btn btn-warning" ng-click="openWindow()">GitHub</button>
+					<button type="button" id="kikP" class="btn btn-success" onclick="location.href = 'https://github.com/drozdzpawel/projects/archive/master.zip'">Pobierz</button>
+				</div>
+			</div>
+		</div>
+	</div>
 </body>
 </html>
